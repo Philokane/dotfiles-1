@@ -406,6 +406,14 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # Add a spacer to the right side of the Dock (where the Trash is)
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
+# Make dock animation faster 
+# Larger values will increase the length of the animation, while smaller values will reduce its length. 1 is normal?
+# defaults write com.apple.dock autohide-time-modifier -float 0.25;killall Dock
+
+# Restore autohide animation speed of the Dock
+# defaults delete com.apple.dock autohide-time-modifier;killall Dock
+
+
 # Hot corners
 # Possible values:
 #  0: no-op
